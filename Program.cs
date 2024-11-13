@@ -7,7 +7,6 @@ namespace App
     public class App
     {
 
-
         private static double Sub(double a, double b)
         {
             double Sub = Convert.ToDouble(a - b);
@@ -36,15 +35,51 @@ namespace App
 
         }
 
+
+        public static void AddTitle()
+        {
+            Console.WriteLine("Bank Add Section");
+            Console.WriteLine("\n");
+
+        }
+
+
+        public static void SubTitle()
+        {
+            Console.WriteLine("Bank Sub Section");
+            Console.WriteLine("\n");
+
+        }
+
+        public static void MulTitle()
+        {
+            Console.WriteLine("Bank Mul Section");
+            Console.WriteLine("\n");
+
+        }
+
+
+        public static void DivTitle()
+        {
+            Console.WriteLine("Bank Div Section");
+            Console.WriteLine("\n");
+
+        }
+
+
+
         static void Main(string[] _)
         {
+            App p = new App();
             Console.WriteLine("Enter Choice? ");
             var choice = Console.ReadLine();
             switch(choice)
             {
 
                 case "/Sub":
+                    Console.WriteLine("\n");
 
+                    App.SubTitle();
 
                     Console.WriteLine("Enter Number 1: ");
                     double num1 = Convert.ToDouble(Console.ReadLine());
@@ -58,6 +93,9 @@ namespace App
 
                     break;
                 case "/Add":
+                    Console.WriteLine("\n");
+                    App.AddTitle();
+
                     Console.WriteLine("Enter Number 1: ");
                     double num3 = Convert.ToDouble(Console.ReadLine());
 
@@ -71,6 +109,8 @@ namespace App
 
                 case "/Mul":
 
+                    Console.WriteLine("\n");
+                    App.MulTitle();
                     Console.WriteLine("Enter Number 1: ");
                     double num5 = Convert.ToDouble(Console.ReadLine());
 
@@ -83,6 +123,10 @@ namespace App
                     break;
 
                 case "/Div":
+                    Console.WriteLine("\n");
+                    App.DivTitle();
+
+
                     Console.WriteLine("Enter Number 1: ");
                     double num7 = Convert.ToDouble(Console.ReadLine());
 
@@ -92,8 +136,6 @@ namespace App
                     double b3 = Math.Truncate(Div(num7, num8));
 
                     Console.WriteLine($"You Will Have: ${Math.Abs(b3)} Left in Your Bank");
-                    break;
-
                     break;
             }
 
